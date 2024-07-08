@@ -1,22 +1,43 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 // import { Link } from 'react-router-dom';
-import me from '../../Image/me2.jpeg';
+import me from '../../Image/me.jpeg';
+import me2 from '../../Image/me2.jpeg'
+import me3 from '../../Image/me3.jpeg';
+import me4 from '../../Image/me4.jpeg';
+import me5 from '../../Image/me5.jpeg';
+import me6 from '../../Image/me6.jpeg';
+import me7 from '../../Image/me7.jpeg';
 import { TypeAnimation } from 'react-type-animation';
 import {BsTwitter, BsGithub, BsLinkedin, BsWhatsapp} from "react-icons/bs";
 import {PiHandWavingBold} from 'react-icons/pi';
 
 function Hero() {
-  return (
-    <div className='md:flex justify-between md:mt-40 m-14'>
-     <div className="object-contain lg:w-1/4 lg:h-1/5 w-full md:w-1/2 lg:order-last">
-     <img src={me} alt="" className=' h-auto w-100 relative right-40 z-50 border-blue-600 rounded-md'/>
-      <div className="bg-slate-800 w-96 h-96 bottom-32 right-44 fixed z-0 "></div>
-     </div>
+  const images = [me, me2, me3, me4, me5, me6, me7];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+        if(currentIndex === images.length - 1) {
+            setCurrentIndex(0);
+        } 
+        else {
+             setCurrentIndex(currentIndex + 1);
+        }
+    }, 3000)
     
+    return () => clearInterval(intervalId);
+})
+  return (
+    <div className='md:flex md:justify-between md:my-40 m-14 Poppins'>
+     <div className=" lg:order-last">
+     <img src={images[currentIndex]} alt="" className='lg:h-96 lg:w-96 w-96 h-96 object-cover lg:relative lg:right-40 z-50 border-blue-600 rounded-lg'/>
+      <div className="bg-slate-800 lg:w-96 lg:h-96 lg:bottom-32 lg:right-48 lg:absolute z-0 rounded-lg invisible md:visible"></div> 
+     </div>
+  
      <div className="md:flex xl:w-1/2">
     <div className="text-white md:mt-20 xl:ms-20">
-    <p className='text-2xl hero-text flex pb-3'> Hi there! <span className='wave'><PiHandWavingBold color='yellow' size='1.2em'/></span> </p>
-    <p className='xl:text-5xl md:text-4xl text-1xl text-teal-200 pb-3'> I am Emmanuel Akinola </p>
+    <p className='text-2xl my-4 flex lg:pb-3'> Hi there! <span className='wave'><PiHandWavingBold color='yellow' size='1.2em'/></span> </p>
+    <p className='xl:text-4xl md:text-4xl text-1xl text-teal-200 pb-3'> I am Emmanuel Akinola. </p>
      <TypeAnimation sequence={[
         'I write code.', 
         3000, 
@@ -24,7 +45,7 @@ function Hero() {
         3000, 
         'Soon to be a full-stack developer.', 
         3000,
-        'I am a creative writer and a content creator.',
+        'I am a writer and a content creator.',
         () => {
           console.log('Sequence completed');
         },
@@ -34,8 +55,8 @@ function Hero() {
       repeat={Infinity}
       style={{ fontSize: '.9em', display: 'inline-block', color: 'white', fontFamily: 'Open Sans, cursive' }}   />
        <div className="flex">
-        {/* <Link to= "/About"> <button className='bg-black border-2 border-teal-500 text-teal-200 p-2 rounded-lg text-sm my-6 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300'> More About Me </button> </Link>
-         <a href="https://us.docworkspace.com/d/sIMiZ7qUp6ceLswY" target="blank"><button className=' bg-black border-2 border-teal-500 text-teal-200 p-2 rounded-lg text-sm my-6 mx-2 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300'> My Resume  </button> </a> */}
+         <a href="#About"> <button className='bg-black border-2 border-teal-500 text-teal-200 p-3 rounded-lg text-sm my-6 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300'> More About Me </button> </a>
+         <a href="https://us.docworkspace.com/d/sIMiZ7qUp6ceLswY" target="blank"><button className=' bg-black border-2 border-teal-500 text-teal-200 p-3 rounded-lg text-sm my-6 mx-2 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300'> My Resume  </button> </a> 
         </div>
         
      </div>

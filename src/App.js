@@ -6,14 +6,19 @@ import Hero from './Components/Hero-section/Hero';
 import About from './Components/About/About';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Contacts from './Components/Contacts/Contacts';
+import Footer from './Components/Footer/Footer';
 function App() {
+
   return (
-    <div className="App">
+    <div className="App" id='Home' >
      <Nav/>
      <Hero/>
+     <hr className='short-line'/>
      <About/>
+     <hr className='dashed-line'/>
      <Portfolio/>
      <Contacts/>
+     <Footer/>
 
       {/* <Router>
 
