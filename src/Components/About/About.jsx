@@ -40,8 +40,8 @@ function About() {
           <h1 className='lg:text-2xl text-xl italic text-center lg:pt-20 py-4'> Why you should hire/work with me for your project? </h1>
         <div className="Montserrat">
         <div class="lg:grid grid-cols-2 gap- mx-auto py-auto">
-          <div className="m-10 lg:p-10 flex flex-wrap lg:flex-nowrap hover:border-2 border-white">
-            <div className="lg:px-4">
+          <div className="m-10 lg:p-10 flex flex-wrap lg:flex-nowrap lg:hover:border-2 lg:border-white animate-slideIn">
+            <div className="lg:px-4 m-auto">
            <Icon icon="codicon:code" width="100" height="100" />
            </div>
            <div className="">
@@ -49,8 +49,8 @@ function About() {
            <p className='text-sm'> Proficient in HTML, CSS, JavaScript, and frameworks such as React, I love what I do and I am a nac for getting the job done, how and when it should be done. I am willing to learn new technologies inorder to achieve set goals. </p>
            </div>
           </div>
-          <div className="m-10 lg:p-10 flex flex-wrap lg:flex-nowrap hover:border-2 border-white">
-          <div className="lg:px-4"> 
+          <div className="m-10 lg:p-10 flex flex-wrap lg:flex-nowrap lg:hover:border-2 lg:border-white animate-slideOut">
+          <div className="lg:px-4 m-auto"> 
           <Icon icon="codicon:layout-panel-justify" width="100" height="100" />
           </div>
           <div className="">
@@ -58,8 +58,8 @@ function About() {
            <p className='text-sm'> Ability to create responsive and mobile-first web applications, I am proficient in using frameworks like Bootstrap or Tailwind CSS and i have a strong understanding of media queries and flexible grid systems. </p>
           </div>
           </div>
-          <div className="m-10 lg:p-10 flex flex-wrap lg:flex-nowrap hover:border-2 border-white">
-          <div className="lg:px-4">
+          <div className="m-10 lg:p-10 flex flex-wrap lg:flex-nowrap lg:hover:border-2 lg:border-white animate-slideIn">
+          <div className="lg:px-4 m-auto">
           <Icon icon="codicon:symbol-property" width="100" height="100" />
           </div>
           <div className="">
@@ -67,8 +67,8 @@ function About() {
            <p className='text-sm'>I am enthusiastic about innovation, creativity and problem solving, Can your idea solve a problem? I want in! I have lofty dreams to become a full-stack software engineer at a world problem solving organization! </p>
           </div>
           </div>
-          <div className="m-10 lg:p-10 flex flex-wrap lg:flex-nowrap hover:border-2 border-white">
-          <div className="lg:px-4">
+          <div className="m-10 lg:p-10 flex flex-wrap lg:flex-nowrap lg:hover:border-2 lg:border-white animate-slideOut">
+          <div className="lg:px-4 m-auto">
           <Icon icon="fluent:people-team-20-filled" width="100" height="100" />
           </div>
           <div className="">

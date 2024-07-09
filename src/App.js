@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'tailwindcss/tailwind.css';
 // import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Nav from './Components/Navbar/Nav';
 import Hero from './Components/Hero-section/Hero';
@@ -8,9 +9,8 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import Contacts from './Components/Contacts/Contacts';
 import Footer from './Components/Footer/Footer';
 function App() {
-
   return (
-    <div className="App" id='Home' >
+    <div className="App animate-fadeIn" id='Home' >
      <Nav/>
      <Hero/>
      <hr className='short-line'/>
@@ -19,7 +19,7 @@ function App() {
      <Portfolio/>
      <Contacts/>
      <Footer/>
-
+    
       {/* <Router>
 
       <Nav/>

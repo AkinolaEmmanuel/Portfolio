@@ -28,7 +28,7 @@ function Hero() {
     return () => clearInterval(intervalId);
 })
   return (
-    <div className='md:flex md:justify-between md:my-40 m-14 Poppins'>
+    <div className='md:flex md:justify-between md:my-40 m-14 Poppins transition-all'>
      <div className=" lg:order-last">
      <img src={images[currentIndex]} alt="" className='lg:h-96 lg:w-96 w-96 h-96 object-cover lg:relative lg:right-40 z-50 border-blue-600 rounded-lg'/>
       <div className="bg-slate-800 lg:w-96 lg:h-96 lg:bottom-32 lg:right-48 lg:absolute z-0 rounded-lg invisible md:visible"></div> 
@@ -56,7 +56,7 @@ function Hero() {
       style={{ fontSize: '.9em', display: 'inline-block', color: 'white', fontFamily: 'Open Sans, cursive' }}   />
        <div className="flex">
          <a href="#About"> <button className='bg-black border-2 border-teal-500 text-teal-200 p-3 rounded-lg text-sm my-6 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300'> More About Me </button> </a>
-         <a href="https://us.docworkspace.com/d/sIMiZ7qUp6ceLswY" target="blank"><button className=' bg-black border-2 border-teal-500 text-teal-200 p-3 rounded-lg text-sm my-6 mx-2 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300'> My Resume  </button> </a> 
+         <a href="https://docs.google.com/document/d/11mp2HtVBTqVuystmJFwkxsBWN2XXSy3nzr8uWbkUjPU/edit?usp=sharing" target="blank"><button className=' bg-black border-2 border-teal-500 text-teal-200 p-3 rounded-lg text-sm my-6 mx-2 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300'> My Resume  </button> </a> 
         </div>
         
      </div>

@@ -4,7 +4,7 @@ import { FaGithub, FaWhatsapp  } from "react-icons/fa";
 
 function Contacts() {
   return (
-    <div className='text-white mx-2 Montserrat' id='Contacts'>
+    <div className='text-white mx-2 Montserrat transition-all' id='Contacts'>
     <div className="contact">
    
     <h1 className='text-4xl text-center my-7'> Contact Me!</h1>

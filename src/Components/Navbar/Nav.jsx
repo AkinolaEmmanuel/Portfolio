@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import "./Nav.css";
-import { Transition } from "@headlessui/react";
+//import { Transition } from "@headlessui/react";
 import { Icon } from '@iconify/react';
-import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
+//import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
 // import {Link} from 'react-router-dom'
 
 
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    
+  };
+  const closeMenu = () => {
+    setIsOpen(false);
+  }
 //   const [isDarkMode, setIsDarkMode] = useState(false);
 
 //   const toggleTheme = () => {
@@ -16,7 +23,7 @@ const Nav = () => {
 //   };
   return (
     
-    <nav className="flex pt-4 justify-between md:justify-around px-2 md:p-6">
+    <nav className="flex pt-4 justify-between md:justify-around px-2 md:p-6 transition-all">
       {/* // <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>  */}
       <div className="text-white md:pt-2 pl-12">
         <span className="font-semibold md:pl-14 text-xl hover:text-2xl transition-all"><a href="#Home"> S.O.G </a></span>
@@ -42,7 +49,68 @@ const Nav = () => {
       </div>
  
      {/* Nav Items for small screens */}
-       <div className="flex md:hidden visible mr-12">
+
+    <div className="flex md:hidden visible mr-12">
+      <button onClick={toggleMenu} className={`text-white rounded ${isOpen ? 'hidden' : 'block'}`}> 
+        <Icon icon="mdi:hamburger-menu" width="30" height="30"/>
+      </button>
+      
+      <div className={`fixed top-0 left-0 h-full w-full z-30 bg-gray-900 bg-opacity-90 transform transition-transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}> 
+        <button className="pl-72 mt-3"> 
+         <Icon icon="radix-icons:cross-2" width="40" height="40" className="text-white" id="close" onClick={closeMenu}/>
+        </button>
+        <div className="px-32 py-20">
+          <ul className="space-y-14">
+             <li className="text-white text-4xl">
+              <a href="#Home">Home</a>
+            </li> 
+            <li className="text-white text-4xl">
+              <a href="#About">About</a>
+            </li>
+            <li className="text-white text-4xl">
+              <a href="#Portfolio">Projects</a>
+            </li>
+            <li className="text-white text-4xl">
+              <a href="#Contacts">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       {/* <div className="flex md:hidden visible mr-12">
         <button onClick={() => setIsOpen(!isOpen)} className="flex items-center px-3 py-1 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
           {isOpen ? (
             <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -76,7 +144,7 @@ const Nav = () => {
           </div>
         )}
       </Transition>
-      </div> 
+      </div>  */}
       {/* // </div> */}
     </nav>
     
