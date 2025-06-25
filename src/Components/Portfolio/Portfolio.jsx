@@ -1,28 +1,68 @@
-import React from 'react'
+import React, { useState } from 'react'
 import screenshot from '../../Image/Screenshot2.png'
+import screenshot2 from '../../Image/Screenshot16.png'
 function Portfolio() {
+
+  const projects = [
+    {
+      id: 1,
+      title: "MaizeKingdom Landing Page",
+      image: screenshot,
+      description: "This is a template landing page for a Maize Producing Company. I designed this with Html, Css and Bootstrap.",
+      repo: "https://www.github.com/AkinolaEmmanuel/MaizeKingdom",
+      link: "https://maizekingdom.netlify.app"
+    },{
+      id: 2,
+      title: "Emmanuel Akinola's Blog",
+      image: screenshot2,
+      description: "This is a personal blog website for my writing. I designed this with React, Vite, Tailwindcss.",
+      repo: "https://www.github.com/AkinolaEmmanuel/myBlog",
+      link: "https://emmanuelakinola-blog.netlify.app"
+    }
+  ]
+
+
+  const [currentIndex, setCurrentIndex] = useState(1);
+
+
+  const handleLoadMore = () => {
+    if (currentIndex < projects.length) {
+         setCurrentIndex((prev) => (prev + 1))
+    } else {
+      setCurrentIndex(1)
+    }
+ 
+  }
+
+
   return (
     <div id='Portfolio' className='my-20 Montserrat transition-all'>
     <div className="text-white text-center my-10">
       <h1 className='text-4xl my-10 font-extrabold Baskervville-SC'> Projects I have worked on </h1>
-      <div className="lg:flex">
-      <div className="m-5 lg:ms-20 xl:mt-10 lg:mt-14 lg:w-8/12 bg-black border-2 border-teal-500 text-teal-200 p-10 rounded-lg text-sm my-6 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300">
-      <img src={screenshot} alt="maizekingdom.com" />
+      {projects.slice(0, currentIndex).map((project) => (
+      <div key={project.id} className="lg:flex">
+      <div className="max-w-xl m-5 lg:ms-20 xl:mt-10 lg:mt-14 lg:w-8/12 bg-black border-2 border-teal-500 text-teal-200 p-10 rounded-lg text-sm my-6 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300">
+      <img src={project.image} alt={project.title} />
       </div>
       <div className="xl:mt-20 lg:mt-10 mx-5 text-start">
-      <h1 className='text-4xl font-extrabold mt-3'> MaizeKingdom Landing Page </h1>
-      <p className='font-light text-gray-600 my-5 lg:w-4/5'> Here is a template landing page for a Maize Producing Company. I designed this with Html, Css and Bootstrap.</p>
+      <h1 className='text-4xl font-extrabold mt-3'> {project.title}</h1>
+      <p className='font-light text-gray-600 my-5 lg:w-4/5'> {project.description}</p>
      
       <div className="">
-      <a href="https://maizekingdom.netlify.app" target='_blank' rel='noreferrer'> <button className='lg:w-1/5 bg-white text-black border rounded-3xl lg:py-2 py-1 px-4 lg:my-2 hover:scale-95 transition-all hover:opacity-50'> Live </button> </a>
-      <a href="https://www.github.com/AkinolaEmmanuel/MaizeKingdom" target="blank"><button className='lg:w-1/5 bg-black text-white border rounded-3xl lg:py-2 py-1 px-4 mx-2 lg:my-2 hover:scale-95 transition-all hover:opacity-50'> Github </button></a> 
+      <a href={project.link} target='_blank' rel='noreferrer'> <button className='lg:w-1/5 bg-white text-black border rounded-3xl lg:py-2 py-1 px-4 lg:my-2 hover:scale-95 transition-all hover:opacity-50'> Live </button> </a>
+      <a href={project.repo} target="blank"><button className='lg:w-1/5 bg-black text-white border rounded-3xl lg:py-2 py-1 px-4 mx-2 lg:my-2 hover:scale-95 transition-all hover:opacity-50'> Github </button></a> 
       <a href="https://docs.google.com/document/d/11mp2HtVBTqVuystmJFwkxsBWN2XXSy3nzr8uWbkUjPU/edit?usp=sharing" target="blank"><button className='bg-black border-teal-500 border text-teal-200 lg:py-2 py-2 px-4 rounded-3xl text-sm lg:my-2 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300'> My Resume  </button></a> 
       
       </div>
       </div>
       </div>
-      
-      <button className='my-20 px-6 py-2 border-2 border-teal-500 hover:bg-teal-500 transition-all' aria-label='More Projects Soon'>Load More</button>
+      ))}
+
+      <button className='my-20 px-6 py-2 border-2 border-teal-500 hover:bg-teal-500 transition-all'
+       aria-label={currentIndex < projects.length ? 'More Projects Soon' : 'Close Projects'} onClick={handleLoadMore}>
+         {currentIndex < projects.length ? 'Load More' : 'Close'}
+      </button>
+        
     </div>
     
 
@@ -33,27 +73,6 @@ function Portfolio() {
       </div>
      <a href="https://docs.google.com/document/d/11mp2HtVBTqVuystmJFwkxsBWN2XXSy3nzr8uWbkUjPU/edit?usp=sharing" target='blank'><button className='my-6 px-6 py-2 border-2 border-white text-white hover:bg-white hover:text-black transition-all'>Download CV </button></a> 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

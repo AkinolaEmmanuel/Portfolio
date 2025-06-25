@@ -25,7 +25,7 @@ const Nav = () => {
     
     <nav className="flex pt-4 justify-between md:justify-around px-2 md:p-6 transition-all">
       {/* // <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>  */}
-      <div className="text-white md:pt-2 pl-12">
+      <div className="text-white md:pt-2">
         <span className="font-semibold md:pl-14 text-xl hover:text-2xl transition-all"><a href="#Home"> S.O.G </a></span>
       </div>
 
@@ -40,12 +40,12 @@ const Nav = () => {
         <a href="#Contacts" className="mt-4 md:mt-0 md:pl-14 hover:text-teal-200 text-white hover:text-lg hover:underline transition-all">
                Contacts
         </a>
-        <a href="#Blog" className="mt-4 md:mt-0 md:pl-14 hover:text-teal-200 text-white hover:text-lg hover:underline transition-all">
+        <a href="https://emmanuelakinola-blog.netlify.app" className="mt-4 md:mt-0 md:pl-14 hover:text-teal-200 text-white hover:text-lg hover:underline transition-all">
                Blog
         </a> 
-        <a href="/" className="md:pl-14 text-white">
+        {/* <a href="/" className="md:pl-14 text-white">
         <Icon icon="ph:moon" width="25" height="25"/>  
-        </a>
+        </a> */}
       </div>
  
      {/* Nav Items for small screens */}

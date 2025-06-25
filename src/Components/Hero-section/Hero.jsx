@@ -28,10 +28,10 @@ function Hero() {
     return () => clearInterval(intervalId);
 })
   return (
-    <div className='md:flex md:justify-between md:my-40 m-14 Poppins transition-all'>
+    <div className='md:flex md:justify-between md:my-20 m-14 Poppins transition-all'>
      <div className=" lg:order-last">
      <img src={images[currentIndex]} alt="" className='lg:h-96 lg:w-96 w-96 h-96 object-cover lg:relative lg:right-40 z-50 border-blue-600 rounded-lg'/>
-      <div className="bg-slate-800 lg:w-96 lg:h-96 lg:bottom-32 lg:right-48 lg:absolute z-0 rounded-lg invisible md:visible"></div> 
+     {/*} <div className="bg-slate-800 lg:w-96 lg:h-96 lg:bottom-32 lg:right-48 lg:absolute z-0 rounded-lg invisible md:visible"></div> */}
      </div>
   
      <div className="md:flex xl:w-1/2">

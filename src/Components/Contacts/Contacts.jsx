@@ -16,21 +16,26 @@ function Contacts() {
      {/* <div className="mx-10">
     <img src={download} alt="" className='hover:scale-125 transition-all' />
     </div> */}
-     <div className="flex">
-      <a href="mailto:emmanuelakinola255@gmail.com" target='blank'><CiMail size={'3em'}/></a>
-       <p className='p-2'>Send me a mail!</p> 
+     <div>
+      <a className="flex items-center lg:mx-10" href="mailto:emmanuelakinola255@gmail.com" target='blank'>
+        <CiMail size={'3em'}/>
+        <p className='p-2'>Send me a mail!</p> 
+      </a>
       </div> 
-     <div className='flex lg:mx-10'>
-      <a href="https://x.com/AkinolaTijesu7" target='blank'><CiTwitter size={'3em'}/></a>
+     <div >
+      <a className='flex items-center lg:mx-10' href="https://x.com/AkinolaTijesu7" target='blank'><CiTwitter size={'3em'}/>
        <p className='p-2'>Send a dm!</p>
+      </a>
      </div> 
-    <div className='flex ;g:mx-10'>
-      <a href="https://github.com/AkinolaEmmanuel" target='blank'><FaGithub size={'3em'}/></a> 
+    <div >
+      <a className='flex items-center lg:mx-10' href="https://github.com/AkinolaEmmanuel" target='blank'><FaGithub size={'3em'}/>
       <p className='p-2'>Collab on Github</p> 
+      </a> 
     </div>  
-    <div className='flex lg:mx-10'>
-    <a href="https://wa.link/cb0sw6" target='blank'><FaWhatsapp size={'3em'}/></a> 
+    <div >
+    <a className='flex items-center lg:mx-10' href="https://wa.link/cb0sw6" target='blank'><FaWhatsapp size={'3em'}/>
     <p className='p-2'>Chat on Whatsapp</p> 
+    </a> 
     </div> 
     
     </div> 
