@@ -22,8 +22,8 @@ const Nav = () => {
 //     setIsDarkMode(!isDarkMode);
 //   };
   return (
-    
-    <nav className="flex pt-4 justify-between md:justify-around px-2 md:p-6 transition-all">
+ 
+    <div className="flex pt-4 justify-between md:justify-around px-10 md:p-6 transition-all">
       {/* // <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>  */}
       <div className="text-white md:pt-2">
         <span className="font-semibold md:pl-14 text-xl hover:text-2xl transition-all"><a href="#Home"> S.O.G </a></span>
@@ -50,7 +50,7 @@ const Nav = () => {
  
      {/* Nav Items for small screens */}
 
-    <div className="flex md:hidden visible mr-12">
+    <div className="flex md:hidden visible md:mr-12">
       <button onClick={toggleMenu} className={`text-white rounded ${isOpen ? 'hidden' : 'block'}`}> 
         <Icon icon="mdi:hamburger-menu" width="30" height="30"/>
       </button>
@@ -146,8 +146,8 @@ const Nav = () => {
       </Transition>
       </div>  */}
       {/* // </div> */}
-    </nav>
-    
+    </div>
+  
   );
 };
 

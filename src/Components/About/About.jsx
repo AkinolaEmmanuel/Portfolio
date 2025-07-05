@@ -1,9 +1,9 @@
 import React from 'react';
 import './About.css';
 import { Icon } from '@iconify/react';
-import {SiHtml5, SiCss3, SiJavascript, SiBootstrap, SiTailwindcss, SiReact, SiPhp, SiMysql, SiGit} from 'react-icons/si';
-
-
+import {SiHtml5, SiCss3, SiJavascript, SiBootstrap, SiTailwindcss, SiReact, SiPhp, SiMysql, SiGit, SiNextdotjs, SiNodedotjs, SiExpress, SiMongodb, SiAngular} from 'react-icons/si';
+import { TbBrandNextjs } from 'react-icons/tb';
+import next from "../../Image/next.svg";
 function About() {
   
   return (
@@ -82,16 +82,23 @@ function About() {
         <div className="my-10 Montserrat">
         <h1 className='text-2xl font-bold text-center pt-4'> My Stack; </h1>
         <div className="lg:flex lg:justify-center">
-        <div className="lg:flex lg:flex-wrap grid grid-cols-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
         <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiHtml5 size='6em' className='text-yellow-700 lg:px-1'/><h3>Html5</h3></button>
         <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiCss3 size='6em' className='text-blue-700 lg;px-1'/><h3>CSS3</h3></button>
         <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiJavascript size='6em' className='text-yellow-300 lg:px-1'/><h3>Javascript</h3></button>
         <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiBootstrap size='6em' className='text-purple-600 px-1'/><h3>Bootstrap5</h3></button>
         <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiTailwindcss size='6em' className='text-blue-500 px-1'/><h3>Tailwind CSS</h3></button>
+
         <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiReact size='6em' className='text-blue-400 px-1'/><h3>ReactJS</h3></button>
+        <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiAngular size='6em' className='text-red-500 px-1'/><h3>Angular</h3></button>
+        {/* <button className='py-2 lg:px-4 px-10 mx-2 my-2'><img src={next} alt="" /><h3>NextJS</h3></button> */}
+        <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiNodedotjs size='6em' className='text-green-500 px-1'/><h3>NodeJS</h3></button>
+        {/* <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiExpress size='6em' className='text-black px-1'/><h3>ExpressJS</h3></button> */}
+        <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiMongodb size='6em' className='text-green-500 px-1'/><h3>MongoDB</h3></button>
         <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiPhp size='6em' className='text-purple-400 px-1'/><h3>PHP</h3></button>
         <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiMysql size='6em' className='text-blue-400 px-1'/><h3>MySQL</h3></button>
         <button className='py-2 lg:px-4 px-10 mx-2 my-2'><SiGit size='6em' className='text-red-600 px-1'/><h3>Git</h3></button>
+   
         </div>
         </div>
         </div>

@@ -11,8 +11,8 @@ function Contacts() {
     <div className="lg:mx-20">
     <p className='italic text-center lg:mx-auto lg:w-10/12'> "Thank you for going through my Portfolio! Do You have an idea you want to bring to life, a position that needs to be filled or you want to chat techie stuffs? I would love to work with you or for us to be friends or partners." </p>
     
-    <div className="ml-20 my-10 lg:ml-0 lg:my-0">
-     <div className="lg:flex lg:flex-wrap lg:my-20 lg:justify-center">
+    <div className="m-10 lg:ml-0 lg:my-0">
+     <div className="flex flex-col md:flex-row md:flex-wrap lg:my-20 items-start justify-center">
      {/* <div className="mx-10">
     <img src={download} alt="" className='hover:scale-125 transition-all' />
     </div> */}
