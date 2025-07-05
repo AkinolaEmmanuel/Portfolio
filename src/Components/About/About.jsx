@@ -1,9 +1,11 @@
 import React from 'react';
 import './About.css';
 import { Icon } from '@iconify/react';
-import {SiHtml5, SiCss3, SiJavascript, SiBootstrap, SiTailwindcss, SiReact, SiPhp, SiMysql, SiGit, SiNextdotjs, SiNodedotjs, SiExpress, SiMongodb, SiAngular} from 'react-icons/si';
-import { TbBrandNextjs } from 'react-icons/tb';
-import next from "../../Image/next.svg";
+import {SiHtml5, SiCss3, SiJavascript, SiBootstrap, SiTailwindcss, SiReact, SiPhp, SiMysql, SiGit, 
+  //SiNextdotjs, SiExpress,
+  SiNodedotjs, SiMongodb, SiAngular} from 'react-icons/si';
+// import { TbBrandNextjs } from 'react-icons/tb';
+// import next from "../../Image/next.svg";
 function About() {
   
   return (
