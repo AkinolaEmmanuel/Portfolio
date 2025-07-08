@@ -30,7 +30,7 @@ function Hero() {
   return (
     <div className='md:w-full md:flex md:justify-between md:my-20 md:mx-0 m-10 Poppins transition-all'>
      <div className="md:order-last">
-     <img src={images[currentIndex]} alt="" className='lg:h-80 lg:w-80 xl:h-96 xl:w-96 w-60 h-60 object-cover md:relative md:right-20 xl:right-40 z-50 border-blue-600 rounded-lg'/>
+     <img src={images[currentIndex]} alt="" className='h-80 w-80 xl:h-96 xl:w-96 object-cover md:relative md:right-20 xl:right-40 z-50 border-blue-600 rounded-lg'/>
      {/*} <div className="bg-slate-800 lg:w-96 lg:h-96 lg:bottom-32 lg:right-48 lg:absolute z-0 rounded-lg invisible md:visible"></div> */}
      </div>
   
