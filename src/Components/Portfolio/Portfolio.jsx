@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import screenshot from '../../Image/Screenshot2.png'
 import screenshot2 from '../../Image/Screenshot16.png'
+import screenshot3 from '../../Image/Screenshot3.png'
 function Portfolio() {
 
   const projects = [
@@ -18,7 +19,22 @@ function Portfolio() {
       description: "This is a personal blog website for my writing. I designed this with React, Vite, Tailwindcss.",
       repo: "https://www.github.com/AkinolaEmmanuel/myBlog",
       link: "https://emmanuelakinola-blog.netlify.app"
-    }
+    },
+    {
+      id: 3, 
+      title: "BlockChain Masters",
+      image: screenshot3,
+      description: "A company website for BlockChain Masters, An affliate of Blockfuse Labs where I served. I designed and built with NextJs, Tailwindcss",
+      repo: "https://www.github.com/AkinolaEmmanuel/blockchain-masters",
+      link: "https://blockchain-masters.vercel.app/"
+    },
+    // {
+    //   id: 4,
+    //   title: "DIC Nigeria",
+    //   description: "A Project I led and built in collaboration with the team at AIQ, It features a website and a functional school portal for student application and educational activites, I built the Front-End with NextJs, Tailwindcss",
+    //   repo: "https://github.com/aiq-ng/dicon-ui",
+    //   link: "https://dic-nigeria.com.ng/home"
+    // }
   ]
 
 
