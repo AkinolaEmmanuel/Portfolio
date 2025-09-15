@@ -1,18 +1,28 @@
 import React, { useState } from 'react'
-import screenshot from '../../Image/Screenshot2.png'
+// import screenshot from '../../Image/Screenshot2.png'
 import screenshot2 from '../../Image/Screenshot16.png'
 import screenshot3 from '../../Image/Screenshot3.png'
+import screenshot4 from '../../Image/Screenshot4.png'
 function Portfolio() {
 
   const projects = [
+      {
+      id: 4,
+      title: "DIC Nigeria",
+      image: screenshot4,
+      description: "A Project I led and built in collaboration with the team at AIQ, It features a website and a functional school portal for student application and educational activites, I built the Front-End with NextJs, Tailwindcss",
+      repo: "https://github.com/aiq-ng/dicon-ui",
+      link: "https://dic-nigeria.com.ng/home"
+    },
+    // {
+    //   id: 1,
+    //   title: "MaizeKingdom Landing Page",
+    //   image: screenshot,
+    //   description: "This is a template landing page for a Maize Producing Company. I designed this with Html, Css and Bootstrap.",
+    //   repo: "https://www.github.com/AkinolaEmmanuel/MaizeKingdom",
+    //   link: "https://maizekingdom.netlify.app"
+    // },
     {
-      id: 1,
-      title: "MaizeKingdom Landing Page",
-      image: screenshot,
-      description: "This is a template landing page for a Maize Producing Company. I designed this with Html, Css and Bootstrap.",
-      repo: "https://www.github.com/AkinolaEmmanuel/MaizeKingdom",
-      link: "https://maizekingdom.netlify.app"
-    },{
       id: 2,
       title: "Emmanuel Akinola's Blog",
       image: screenshot2,
@@ -28,13 +38,7 @@ function Portfolio() {
       repo: "https://www.github.com/AkinolaEmmanuel/blockchain-masters",
       link: "https://blockchain-masters.vercel.app/"
     },
-    // {
-    //   id: 4,
-    //   title: "DIC Nigeria",
-    //   description: "A Project I led and built in collaboration with the team at AIQ, It features a website and a functional school portal for student application and educational activites, I built the Front-End with NextJs, Tailwindcss",
-    //   repo: "https://github.com/aiq-ng/dicon-ui",
-    //   link: "https://dic-nigeria.com.ng/home"
-    // }
+  
   ]
 
 
@@ -57,8 +61,8 @@ function Portfolio() {
       <h1 className='text-4xl my-10 font-extrabold Baskervville-SC'> Projects I have worked on </h1>
       {projects.slice(0, currentIndex).map((project) => (
       <div key={project.id} className="lg:flex">
-      <div className="max-w-xl m-5 lg:ms-20 xl:mt-10 lg:mt-14 lg:w-8/12 bg-black border-2 border-teal-500 text-teal-200 p-10 rounded-lg text-sm my-6 hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300">
-      <img src={project.image} alt={project.title} />
+      <div className="max-w-lg m-5 p-5 lg:ms-20 xl:mt-10 lg:mt-14 lg:w-2/3 xl:w-3/4 2xl:w-9/10 bg-black border-2 border-teal-500 text-teal-200 rounded-lg text-sm hover:bg-teal-500 hover:border-black hover:text-white hover:transition hover:ease-in hover:duration-300">
+      <img src={project.image} alt={project.title} className='lg:min-w-[450px] lg:max-w-[450px] object-contain'/>
       </div>
       <div className="xl:mt-20 lg:mt-10 mx-5 text-start">
       <h1 className='text-4xl font-extrabold mt-3'> {project.title}</h1>
