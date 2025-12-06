@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import screenshot2 from '../../Image/Screenshot16.png'
 import screenshot3 from '../../Image/Screenshot3.png'
 import screenshot4 from '../../Image/Screenshot4.png'
+import screenshot5 from '../../Image/Screenshot6.png'
 function Portfolio() {
 
   const projects = [
@@ -38,6 +39,14 @@ function Portfolio() {
       repo: "https://www.github.com/AkinolaEmmanuel/blockchain-masters",
       link: "https://blockchain-masters.vercel.app/"
     },
+    {
+      id: 4,
+      title: "Billionaire Bukunmi", 
+      image: screenshot5,
+      description: "A portfolio website for Billionare Bukunmi - Adewuyi Oluwabukola Bukunmi - A public speaker, founder, counsellor and author", 
+      repo: "https://www.github.com/AkinolaEmmanuel/portfolio-website-for-client",
+      link: "https://billionairebukunmi.com/"
+    }
   
   ]
 
