@@ -10,8 +10,8 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space
 
 
 export const metadata: Metadata = {
-  title: "DevPortfolio | Full Stack Developer",
-  description: "Modern portfolio built with Next.js 16",
+  title: "Akinola Emmanuel | Software Engineer | Fullstak Developer - Portfolio",
+  description: "Akinola Emmanuel's personal portfolio showcasing projects, skills, and experience as a Software Engineer and Fullstack Developer. Akinola Emmanuel is building great and groundbreaking software solutions with seamless user experiences.",
 };
 
 export default function RootLayout({

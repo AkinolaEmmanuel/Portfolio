@@ -58,7 +58,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-4xl md:text-5xl font-heading font-bold mb-4"
+          className="text-5xl font-heading font-bold mb-4"
         >
           Hello, I'm{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-pink-500">

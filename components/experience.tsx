@@ -82,7 +82,7 @@ function ExperienceCard({
       {/* Card */}
       <div className="relative p-6 md:p-8 rounded-2xl bg-background border border-border/50 group-hover:border-transparent group-hover:shadow-2xl transition-all duration-300">
         {/* Company badge */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-3 justify-between mb-4">
           <motion.div 
             className={`p-2.5 rounded-xl bg-gradient-to-br ${exp.gradient} shadow-lg`}
             whileHover={{ scale: 1.1, rotate: 5 }}

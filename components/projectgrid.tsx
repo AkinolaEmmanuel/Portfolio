@@ -7,7 +7,7 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useRef, MouseEvent } from "react";
 
-// Project data
+
 const projects = [
   {
     id: 1,
