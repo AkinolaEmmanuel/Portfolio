@@ -12,7 +12,7 @@ const projects = [
   {
     id: 1,
     title: "DIC Nigeria",
-    image: "/Screenshot4.png",
+    image: "/screenshot4.png",
     description: "A Project I led and built in collaboration with the team at AIQ. Features a website and functional school portal for student application and educational activities.",
     repo: "https://github.com/aiq-ng/dicon-ui",
     link: "https://dic-nigeria.com.ng/home",
@@ -22,7 +22,7 @@ const projects = [
   {
     id: 2,
     title: "Emmanuel Akinola's Blog",
-    image: "/Screenshot16.png",
+    image: "/screenshot16.png",
     description: "A personal blog website for my writing. Designed with React, Vite, Tailwindcss.",
     repo: "https://www.github.com/AkinolaEmmanuel/myBlog",
     link: "https://emmanuelakinola-blog.netlify.app",
@@ -32,7 +32,7 @@ const projects = [
   {
     id: 3,
     title: "BlockChain Masters",
-    image: "/Screenshot3.png",
+    image: "/screenshot3.png",
     description: "A company website for BlockChain Masters, an affiliate of Blockfuse Labs where I served.",
     repo: "https://www.github.com/AkinolaEmmanuel/blockchain-masters",
     link: "https://blockchain-masters.vercel.app/",
@@ -42,7 +42,7 @@ const projects = [
   {
     id: 4,
     title: "Billionaire Bukunmi",
-    image: "/Screenshot6.png",
+    image: "/screenshot6.png",
     description: "A portfolio website for Billionaire Bukunmi - A public speaker, founder, counsellor and author.",
     repo: "https://www.github.com/AkinolaEmmanuel/portfolio-website-for-client",
     link: "https://billionairebukunmi.com/",
@@ -52,7 +52,7 @@ const projects = [
   {
     id: 5,
     title: "Movie Summary Encyclopedia",
-    image: "/Screenshot7.png",
+    image: "/screenshot7.png",
     description: "A movie summary encyclopedia website that provides concise summaries of movies.",
     repo: "https://www.github.com/AkinolaEmmanuel/movie-home",
     link: "https://movie-home-rflu.onrender.com/",
@@ -62,7 +62,7 @@ const projects = [
   {
     id: 6,
     title: "AMCAN",
-    image: "/Screenshot8.png",
+    image: "/screenshot8.png",
     description: "A demo website for AMCAN website at AIQ. Showcasing AMCAN's services and features.",
     repo: "https://www.github.com/aiq-ng/amcan-web",
     link: "https://amcan-text.vercel.app/",

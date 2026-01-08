@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download, Code2, Database, Globe, Layers, Terminal, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 // Typewriter hook for typing and erasing effect
 function useTypewriter(text: string, typingSpeed = 100, erasingSpeed = 50, pauseTime = 2000) {
@@ -135,14 +136,18 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
+              <Link href={"#projects"}>
               <Button size="lg" className="rounded-full group">
                 View Projects
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full hover:bg-secondary/90 group">
+              </Link>
+              <Link href={"https://drive.google.com/file/d/1yO2eH_GIMPysz8G0a1ll3sCDGGflgqTy/view?usp=drive_link"}>
+              <Button  variant="outline" size="lg" className="rounded-full hover:bg-secondary/90 group">
                 <Download className="mr-2 w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
                 Download CV
               </Button>
+              </Link>
             </motion.div>
           </div>
         </div>
