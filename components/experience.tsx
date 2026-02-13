@@ -27,7 +27,7 @@ const experiences = [
   {
     company: "The Nebula",
     role: "Front-End Developer",
-    date: "Sept 2024 - Oct 2025",
+    date: "Sept 2025 - Oct 2025",
     location: "Remote",
     description: "Collaborate with a distributed open-source team as a freelance developer, contributing to a shared repository while maintaining high code quality and meeting task deadlines.",
     highlights: ["Open Source", "Collaboration", "Code Quality"],

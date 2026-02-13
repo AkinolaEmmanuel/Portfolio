@@ -11,12 +11,12 @@ import { useRef, MouseEvent } from "react";
 const projects = [
   {
     id: 1,
-    title: "DIC Nigeria",
-    image: "/screenshot4.png",
-    description: "A Project I led and built in collaboration with the team at AIQ. Features a website and functional school portal for student application and educational activities.",
-    repo: "https://github.com/aiq-ng/dicon-ui",
-    link: "https://dic-nigeria.com.ng/home",
-    tags: ["Next.js", "Tailwindcss", "Strapi"],
+    title: "Appreciate",
+    image: "/screenshot10.png",
+    description: "A web application that helps you record and send personalized appreciation messages to your lover and loved ones",
+    repo: "https://github.com/AkinolaEmmanuel/appreciate-your-lover-app",
+    link: "https://appreciate.click",
+    tags: ["Next.js", "Tailwindcss", "Supabase"],
     gradient: "from-blue-500 via-purple-500 to-pink-500",
   },
   {
@@ -61,12 +61,12 @@ const projects = [
   },
   {
     id: 6,
-    title: "AMCAN",
-    image: "/screenshot8.png",
-    description: "A demo website for AMCAN website at AIQ. Showcasing AMCAN's services and features.",
-    repo: "https://www.github.com/aiq-ng/amcan-web",
-    link: "https://amcan-text.vercel.app/",
-    tags: ["Next.js", "Tailwindcss"],
+    title: "IKDLI",
+    image: "/screenshot11.png",
+    description: "A website for a theological school offering different programs",
+    repo: "https://www.github.com/AkinolaEmmanuel/ikdli",
+    link: "https://ikdli.com",
+    tags: ["Angular", "Tailwindcss"],
     gradient: "from-green-500 via-lime-500 to-yellow-500",
   }
 ];

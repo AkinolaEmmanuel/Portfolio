@@ -363,7 +363,7 @@ export default function ContactForm() {
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 z-50 group"
           >
-            <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-primary to-purple-500 opacity-0 group-hover:opacity-60 blur-lg transition-all duration-300" />
+            <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-primary opacity-0 group-hover:opacity-60 blur-lg transition-all duration-300" />
             
             <div className="relative flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-primary to-purple-500 shadow-2xl cursor-pointer">
               <motion.div
