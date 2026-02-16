@@ -5,6 +5,7 @@ import { ArrowRight, Download, Code2, Database, Globe, Layers, Terminal, Zap } f
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Magnetic from "@/components/ui/magnetic";
 
 // Typewriter hook for typing and erasing effect
 function useTypewriter(text: string, typingSpeed = 100, erasingSpeed = 50, pauseTime = 2000) {
@@ -44,12 +45,12 @@ function useTypewriter(text: string, typingSpeed = 100, erasingSpeed = 50, pause
 
 // Floating icons configuration
 const floatingIcons = [
-  { Icon: Code2, position: "top-[15%] left-[10%]", delay: 0, color: "text-primary" },
-  { Icon: Database, position: "top-[20%] right-[12%]", delay: 0.5, color: "text-secondary" },
-  { Icon: Globe, position: "bottom-[25%] left-[8%]", delay: 1, color: "text-accent" },
-  { Icon: Layers, position: "bottom-[30%] right-[10%]", delay: 1.5, color: "text-primary" },
-  { Icon: Terminal, position: "top-[40%] left-[5%]", delay: 2, color: "text-secondary" },
-  { Icon: Zap, position: "top-[35%] right-[6%]", delay: 2.5, color: "text-accent" },
+  { Icon: Code2, position: "top-[15%] left-[10%]", delay: 0, color: "text-foreground/80" },
+  { Icon: Database, position: "top-[20%] right-[12%]", delay: 0.5, color: "text-foreground/60" },
+  { Icon: Globe, position: "bottom-[25%] left-[8%]", delay: 1, color: "text-foreground/40" },
+  { Icon: Layers, position: "bottom-[30%] right-[10%]", delay: 1.5, color: "text-foreground/80" },
+  { Icon: Terminal, position: "top-[40%] left-[5%]", delay: 2, color: "text-foreground/60" },
+  { Icon: Zap, position: "top-[35%] right-[6%]", delay: 2.5, color: "text-foreground/40" },
 ];
 
 export default function Hero() {
@@ -61,9 +62,9 @@ export default function Hero() {
         {/* Grid Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
         
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-[100px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[100px]" />
+        {/* Light Orbs for depth */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-foreground/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-foreground/10 rounded-full blur-[100px]" />
 
         {/* Floating Icons */}
         {floatingIcons.map(({ Icon, position, delay, color }, index) => (
@@ -98,10 +99,10 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border bg-secondary/10 text-secondary text-sm font-medium">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-secondary text-secondary-foreground text-sm font-medium">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground/30 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-foreground"></span>
                 </span>
                 {typewriterText}
                 <span className="animate-pulse">|</span>
@@ -115,7 +116,7 @@ export default function Hero() {
               className="text-4xl md:text-5xl font-heading font-bold tracking-tight"
             >
               Software Engineer building
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary block mt-2">
+              <span className="block mt-4 text-foreground font-serif italic font-normal tracking-normal lowercase">
                 digital and ground-breaking solutions.
               </span>
             </motion.h1>
@@ -126,28 +127,28 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-base text-muted-foreground max-w-2xl mx-auto"
             >
-              I'm a Full Stack Developer specializing in building digital solutions.
-              Currently focused on accessible, human-centered products at speed.
+              I'm a Full Stack Developer specializing in building high-performance digital products.
+              Currently focused on accessible, human-centered software at speed.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex gap-4 justify-center"
+              className="flex gap-6 justify-center"
             >
-              <Link href={"#projects"}>
+                <Link href={"#projects"}>
               <Button size="lg" className="rounded-full group">
-                View Projects
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-              </Link>
+                    View Projects
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               <Link href={"https://drive.google.com/file/d/1yO2eH_GIMPysz8G0a1ll3sCDGGflgqTy/view?usp=drive_link"}>
-              <Button  variant="outline" size="lg" className="rounded-full hover:bg-secondary/90 group">
-                <Download className="mr-2 w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
-                Download CV
-              </Button>
-              </Link>
+              <Button  variant="outline" size="lg" className="rounded-full hover:bg-background/10 hover:text-foreground group">
+                    <Download className="mr-2 w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
+                    Resume
+                  </Button>
+                </Link>
             </motion.div>
           </div>
         </div>

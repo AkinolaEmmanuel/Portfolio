@@ -44,28 +44,18 @@ export default function About() {
         transition={{ duration: 0.6 }}
         className="text-center mb-12"
       >
-        <motion.span
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
-        >
-          About Me
-        </motion.span>
+
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-5xl font-heading font-bold mb-4"
+          className="text-5xl md:text-7xl font-heading font-bold mb-4"
         >
           Hello, I'm{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-pink-500">
-            Emmanuel Akinola<span className="animate-pulse text-purple-600">.</span>
+          <span className="font-serif italic font-normal tracking-tight text-foreground lowercase">
+            Emmanuel Akinola<span className="animate-pulse not-italic">.</span>
           </span>
-          
-        
         </motion.h2>
       </motion.div>
 
@@ -82,10 +72,10 @@ export default function About() {
         className="group relative max-w-6xl mx-auto"
       >
         {/* Glow effect */}
-        <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary via-purple-500 to-pink-500 opacity-0 group-hover:opacity-30 blur-xl transition-all duration-700" />
+        <div className="absolute -inset-1 rounded-3xl bg-foreground opacity-0 group-hover:opacity-10 blur-xl transition-all duration-700" />
         
         {/* Card */}
-        <div className="relative p-8 md:p-12 rounded-3xl bg-background border border-border/50 group-hover:border-transparent transition-all duration-300">
+        <div className="relative p-8 md:p-12 rounded-3xl bg-background border border-border group-hover:border-transparent transition-all duration-300">
           
           {/* Introduction */}
           <motion.p 
@@ -121,7 +111,7 @@ export default function About() {
                 >
                   <Badge 
                     variant="secondary" 
-                    className="bg-secondary/60 hover:bg-primary hover:text-primary-foreground text-sm px-3 py-1 cursor-default transition-all duration-300"
+                    className="bg-secondary/60 hover:bg-foreground hover:text-background text-sm px-3 py-1 cursor-default transition-all duration-300"
                   >
                     {tech}
                   </Badge>

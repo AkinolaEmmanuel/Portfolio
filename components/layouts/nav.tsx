@@ -119,12 +119,12 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium hover:text-primary transition-colors relative group"
+                  className="text-sm font-medium hover:text-foreground transition-colors relative group"
                 >
                   {item.name}
                   <span
                     className={cn(
-                      "absolute -bottom-1 left-0 h-0.5 bg-primary transition-all",
+                      "absolute -bottom-1 left-0 h-0.5 bg-foreground transition-all",
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     )}
                   />
@@ -145,13 +145,13 @@ export default function Navbar() {
                 title={copied ? "Email copied!" : "Copy email"}
               >
                 {copied ? (
-                  <Check className="w-4 h-4 text-green-500" />
+                  <Check className="w-4 h-4 text-foreground" />
                 ) : (
                   <Copy className="w-4 h-4 text-muted-foreground hover:text-foreground transition-colors" />
                 )}
               </button>
               {copied && (
-                <span className="text-xs text-green-500 animate-in fade-in">
+                <span className="text-xs text-foreground animate-in fade-in">
                   Email copied!
                 </span>
               )}
@@ -175,7 +175,7 @@ export default function Navbar() {
                       exit={{ rotate: 90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Sun className="w-5 h-5 text-yellow-500" />
+                      <Sun className="w-5 h-5 text-foreground" />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -185,7 +185,7 @@ export default function Navbar() {
                       exit={{ rotate: -90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Moon className="w-5 h-5 text-blue-500" />
+                      <Moon className="w-5 h-5 text-foreground" />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -226,7 +226,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-background border-l z-40 lg:hidden flex flex-col shadow-2xl"
+              className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-background border-l border-border z-40 lg:hidden flex flex-col shadow-2xl"
             >
               <div className="flex flex-col h-full pt-10 px-6 pb-6">
                 {/* Mobile Nav Links */}
@@ -246,7 +246,7 @@ export default function Navbar() {
                           onClick={() => setIsMobileMenuOpen(false)}
                           className={cn(
                             "text-2xl font-heading font-bold transition-colors block",
-                            isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                            isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                           )}
                         >
                           {item.name}
@@ -267,7 +267,7 @@ export default function Navbar() {
                         className="p-2 rounded-md hover:bg-background transition-colors"
                       >
                         {copied ? (
-                          <Check className="w-4 h-4 text-green-500" />
+                          <Check className="w-4 h-4 text-foreground" />
                         ) : (
                           <Copy className="w-4 h-4" />
                         )}
@@ -288,7 +288,7 @@ export default function Navbar() {
                         href={Item.href} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-foreground transition-colors"
                       >
                         <Item.icon className="w-5 h-5" />
                       </a>

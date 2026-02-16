@@ -33,25 +33,25 @@ const socialLinks = [
     name: "GitHub",
     href: "https://github.com/AkinolaEmmanuel",
     icon: Github,
-    gradient: "from-gray-700 to-gray-900",
+    gradient: "from-foreground/80 to-foreground/60",
   },
   {
     name: "LinkedIn",
     href: "https://linkedin.com/in/emmanuel-tijesunimi-akinola",
     icon: Linkedin,
-    gradient: "from-blue-600 to-blue-800",
+    gradient: "from-foreground/60 to-foreground/40",
   },
   {
     name: "Twitter",
     href: "https://twitter.com/akinolatijesu7",
     icon: Twitter,
-    gradient: "from-sky-400 to-blue-500",
+    gradient: "from-foreground/40 to-foreground/20",
   },
   {
     name: "Email",
     href: "mailto:akinolaemmanueltijesunimi@gmail.com",
     icon: Mail,
-    gradient: "from-red-500 to-pink-500",
+    gradient: "from-foreground/20 to-foreground/5",
   },
 ];
 
@@ -122,7 +122,7 @@ export default function ContactForm() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-4"
           >
             Contact
           </motion.span>
@@ -134,7 +134,7 @@ export default function ContactForm() {
             className="text-4xl md:text-5xl font-heading font-bold mb-4"
           >
             Let's{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-pink-500">
+            <span className="text-foreground">
               Connect
             </span>
           </motion.h2>
@@ -159,12 +159,9 @@ export default function ContactForm() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-8"
             >
-              <div className="p-8 rounded-3xl bg-background border border-border/50">
+              <div className="p-8 rounded-3xl bg-background border border-border">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-2.5 rounded-xl bg-gradient-to-br from-primary to-purple-500 shadow-lg">
-                    <Sparkles className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold">Get in Touch</h3>
+                  <h3 className="text-xl md:text-3xl font-bold">Get in Touch</h3>
                 </div>
                 
                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -192,14 +189,14 @@ export default function ContactForm() {
                             rel="noopener noreferrer"
                             className="group/link relative"
                           >
-                            <div className={`absolute -inset-2 rounded-xl bg-gradient-to-r ${social.gradient} opacity-0 group-hover/link:opacity-50 blur-lg transition-all duration-300`} />
+                             <div className={`absolute -inset-2 rounded-xl bg-foreground opacity-0 group-hover/link:opacity-20 blur-lg transition-all duration-300`} />
                             
                             <motion.div
                               whileHover={{ scale: 1.1, y: -2 }}
                               whileTap={{ scale: 0.95 }}
-                              className={`relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${social.gradient} shadow-lg cursor-pointer`}
+                               className={`relative flex items-center justify-center w-12 h-12 rounded-xl bg-foreground shadow-lg cursor-pointer`}
                             >
-                              <Icon className="w-5 h-5 text-white" />
+                              <Icon className="w-5 h-5 text-background" />
                             </motion.div>
                             
                             <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-muted-foreground opacity-0 group-hover/link:opacity-100 transition-opacity whitespace-nowrap">
@@ -222,15 +219,15 @@ export default function ContactForm() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="group relative"
             >
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary via-purple-500 to-pink-500 opacity-0 group-hover:opacity-20 blur-xl transition-all duration-700" />
+              <div className="absolute -inset-1 rounded-3xl bg-foreground opacity-0 group-hover:opacity-10 blur-xl transition-all duration-700" />
               
-              <div className="relative p-8 rounded-3xl bg-background border border-border/50 group-hover:border-transparent transition-all duration-300">
+              <div className="relative p-8 rounded-3xl bg-background border border-border group-hover:border-transparent transition-all duration-300">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div className="space-y-2">
                     <Input 
                       placeholder="Your Name"
                       {...register("name")}
-                      className="bg-secondary/20 border-border/50 focus:border-primary/50 h-12 rounded-xl transition-colors" 
+                      className="bg-secondary/20 border border-border focus:border-foreground/50 h-12 rounded-xl transition-colors" 
                     />
                     {errors.name && <span className="text-xs text-red-500">{errors.name.message}</span>}
                   </div>
@@ -240,7 +237,7 @@ export default function ContactForm() {
                       placeholder="Your Email"
                       type="email"
                       {...register("email")}
-                      className="bg-secondary/20 border-border/50 focus:border-primary/50 h-12 rounded-xl transition-colors" 
+                      className="bg-secondary/20 border border-border focus:border-foreground/50 h-12 rounded-xl transition-colors" 
                     />
                     {errors.email && <span className="text-xs text-red-500">{errors.email.message}</span>}
                   </div>
@@ -249,7 +246,7 @@ export default function ContactForm() {
                     <Textarea 
                       placeholder="Your Message"
                       {...register("message")}
-                      className="min-h-[150px] bg-secondary/20 border-border/50 focus:border-primary/50 rounded-xl transition-colors resize-none" 
+                      className="min-h-[150px] bg-secondary/20 border-border focus:border-foreground/50 rounded-xl transition-colors resize-none" 
                     />
                     {errors.message && <span className="text-xs text-red-500">{errors.message.message}</span>}
                   </div>
@@ -257,7 +254,7 @@ export default function ContactForm() {
                   <Button 
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-12 rounded-xl bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 text-white font-semibold shadow-lg transition-all duration-300 disabled:opacity-50"
+                    className="w-full h-12 rounded-xl bg-foreground hover:bg-foreground/90 text-background font-semibold shadow-lg transition-all duration-300 disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       "Sending..."
@@ -290,7 +287,7 @@ export default function ContactForm() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="relative max-w-md w-full bg-background rounded-3xl p-8 shadow-2xl border border-border/50"
+              className="relative max-w-md w-full bg-background rounded-3xl p-8 shadow-2xl border border-border"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close button */}
@@ -309,9 +306,9 @@ export default function ContactForm() {
                 className="flex justify-center mb-6"
               >
                 <div className="relative">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 blur-xl opacity-40" />
-                  <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg">
-                    <CheckCircle className="w-10 h-10 text-white" />
+                  <div className="absolute inset-0 rounded-full bg-foreground blur-xl opacity-20" />
+                  <div className="relative w-20 h-20 rounded-full bg-foreground flex items-center justify-center shadow-lg">
+                    <CheckCircle className="w-10 h-10 text-background" />
                   </div>
                 </div>
               </motion.div>
@@ -325,7 +322,7 @@ export default function ContactForm() {
               >
                 <h3 className="text-2xl font-bold mb-2">
                   Thank{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-pink-500">
+                  <span className="text-foreground">
                     You!
                   </span>
                 </h3>
@@ -363,14 +360,14 @@ export default function ContactForm() {
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 z-50 group"
           >
-            <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-primary opacity-0 group-hover:opacity-60 blur-lg transition-all duration-300" />
+            <div className="absolute -inset-2 rounded-full bg-foreground opacity-0 group-hover:opacity-20 blur-lg transition-all duration-300" />
             
-            <div className="relative flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-primary to-purple-500 shadow-2xl cursor-pointer">
+            <div className="relative flex items-center justify-center w-14 h-14 rounded-full bg-foreground shadow-2xl cursor-pointer">
               <motion.div
                 animate={{ y: [0, -3, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
               >
-                <ArrowUp className="w-6 h-6 text-white" />
+                <ArrowUp className="w-6 h-6 text-background" />
               </motion.div>
             </div>
           </motion.button>

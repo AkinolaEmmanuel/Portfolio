@@ -17,7 +17,7 @@ const projects = [
     repo: "https://github.com/AkinolaEmmanuel/appreciate-your-lover-app",
     link: "https://appreciate.click",
     tags: ["Next.js", "Tailwindcss", "Supabase"],
-    gradient: "from-blue-500 via-purple-500 to-pink-500",
+    gradient: "from-foreground/80 via-foreground/60 to-foreground/40",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const projects = [
     repo: "https://www.github.com/AkinolaEmmanuel/myBlog",
     link: "https://emmanuelakinola-blog.netlify.app",
     tags: ["React", "Vite", "Tailwindcss"],
-    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+    gradient: "from-foreground/60 via-foreground/40 to-foreground/20",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const projects = [
     repo: "https://www.github.com/AkinolaEmmanuel/blockchain-masters",
     link: "https://blockchain-masters.vercel.app/",
     tags: ["Next.js", "Tailwindcss"],
-    gradient: "from-orange-500 via-red-500 to-rose-500",
+    gradient: "from-foreground/40 via-foreground/20 to-foreground/10",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const projects = [
     repo: "https://www.github.com/AkinolaEmmanuel/portfolio-website-for-client",
     link: "https://billionairebukunmi.com/",
     tags: ["Next.js", "Tailwindcss"],
-    gradient: "from-pink-500 via-rose-500 to-red-500",
+    gradient: "from-foreground/80 via-foreground/60 to-foreground/40",
   },
   {
     id: 5,
@@ -57,18 +57,18 @@ const projects = [
     repo: "https://www.github.com/AkinolaEmmanuel/movie-home",
     link: "https://movie-home-rflu.onrender.com/",
     tags: ["React", "Vite", "Tailwindcss", "Node.js", "Express"],
-    gradient: "from-violet-500 via-purple-500 to-indigo-500",
+    gradient: "from-foreground/60 via-foreground/40 to-foreground/20",
   },
   {
     id: 6,
     title: "IKDLI",
     image: "/screenshot11.png",
-    description: "A website for a theological school offering different programs",
+    description: "A website for a theological school offering different programs.",
     repo: "https://www.github.com/AkinolaEmmanuel/ikdli",
     link: "https://ikdli.com",
     tags: ["Angular", "Tailwindcss"],
-    gradient: "from-green-500 via-lime-500 to-yellow-500",
-  }
+    gradient: "from-foreground/40 via-foreground/20 to-foreground/10",
+  },
 ];
 
 // Animated project card with 3D tilt effect
@@ -128,7 +128,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
     >
       {/* Pulsing glow effect on hover */}
       <motion.div 
-        className={`absolute -inset-1 rounded-2xl bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-70 blur-xl transition-all duration-700`}
+        className={`absolute -inset-1 rounded-2xl bg-foreground opacity-0 group-hover:opacity-10 blur-xl transition-all duration-700`}
         animate={{
           scale: [1, 1.02, 1],
         }}
@@ -141,7 +141,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       
       {/* Card container */}
       <div 
-        className="relative h-full rounded-2xl bg-background border border-border/50 overflow-hidden transition-all duration-300 group-hover:border-transparent group-hover:shadow-2xl"
+        className="relative h-full rounded-2xl bg-background border border-border overflow-hidden transition-all duration-300 group-hover:border-transparent group-hover:shadow-2xl"
         style={{ transformStyle: "preserve-3d" }}
       >
         {/* Spotlight effect following cursor */}
@@ -151,7 +151,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             background: useMotionTemplate`
               radial-gradient(
                 400px circle at ${mouseX}px ${mouseY}px,
-                rgba(120, 119, 198, 0.12),
+                rgba(0, 0, 0, 0.05),
                 transparent 70%
               )
             `,
@@ -171,7 +171,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           
           {/* Project number badge */}
           <motion.div 
-            className={`absolute top-4 left-4 w-10 h-10 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white font-bold text-sm shadow-lg`}
+            className={`absolute top-4 left-4 w-10 h-10 rounded-xl bg-foreground flex items-center justify-center text-background font-bold text-sm shadow-lg`}
             whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
@@ -262,10 +262,10 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 text-sm font-semibold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent transition-all duration-300`}
+              className={`inline-flex items-center gap-2 text-sm font-semibold text-foreground transition-all duration-300`}
             >
               View Project
-              <ArrowUpRight className="w-4 h-4 text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight className="w-4 h-4 text-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </motion.div>
         </div>
@@ -285,15 +285,7 @@ export default function ProjectGrid() {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <motion.span
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
-        >
-          Portfolio
-        </motion.span>
+      
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -302,7 +294,7 @@ export default function ProjectGrid() {
           className="text-4xl md:text-5xl font-heading font-bold mb-4"
         >
           Featured{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-pink-500">
+          <span className="text-foreground">
             Projects
           </span>
         </motion.h2>

@@ -26,21 +26,21 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#3B82F6", // Blue
+          DEFAULT: "#000000", // Black
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#8B5CF6", // Purple
-          foreground: "#FFFFFF",
+          DEFAULT: "#F3F4F6", // Light Gray
+          foreground: "#111827",
         },
         accent: {
-          DEFAULT: "#10B981", // Green
+          DEFAULT: "#6B7280", // Medium Gray
           foreground: "#FFFFFF",
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'dot-pattern': 'radial-gradient(circle, #3B82F6 1px, transparent 1px)',
+        'dot-pattern': 'radial-gradient(circle, #6B7280 1px, transparent 1px)',
       },
     },
   },

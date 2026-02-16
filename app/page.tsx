@@ -3,6 +3,8 @@ import ProjectGrid from "@/components/projectgrid";
 import Experience from "@/components/experience";
 import ContactForm from "@/components/contactform";
 import About from "@/components/about";
+//import Testimonials from "@/components/testimonials";
+//import GithubStats from "@/components/github-stats";
 
 export default function Home() {
   return (
@@ -11,7 +13,9 @@ export default function Home() {
       <About />
       <ProjectGrid />
       <Experience />
-
+      {/*
+      <Testimonials />
+      <GithubStats /> */}
       <ContactForm />
       
       {/* Footer Simple */}

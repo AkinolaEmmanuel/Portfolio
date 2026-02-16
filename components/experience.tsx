@@ -7,31 +7,31 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    company: "ElectPoll",
-    role: "Frontend Engineer",
-    date: "Mar 2024 - Present",
+    company: "LASEPA (Contract)",
+    role: "Full-Stack Developer",
+    date: "Jan 2025 – Present",
+    location: "Lagos, Nigeria",
+    description: "Engineered the Back-end for a state-wide ticketing complaint system with NestJs. Collaborated on Front-end using TanstackQuery and Zustand, translating Figma prototypes to responsive interfaces.",
+    highlights: ["NestJs", "TanstackQuery", "Zustand", "System Design"],
+    gradient: "from-foreground/80 to-foreground/40",
+  },
+  {
+    company: "Electpoll",
+    role: "Front-End Developer",
+    date: "Mar 2024 – Present",
     location: "Remote",
-    description: "Contributed to the deployment of a secure e-voting platform, participating in successful remote election deployments.",
-    highlights: ["E-Voting Platform", "Remote Elections", "Secure Systems"],
-    gradient: "from-blue-500 to-cyan-500",
+    description: "Team member for the brand offering electronic voting for 12,000+ voters. Developed revamped React setup for the platform and built the NestJs/Prisma Back-end.",
+    highlights: ["React", "NestJs", "Prisma", "E-Voting", "Figma"],
+    gradient: "from-foreground/60 to-foreground/20",
   },
   {
     company: "AIQ",
-    role: "Full Stack Developer",
-    date: "July 2024 - Sept 2025",
+    role: "Full-Stack Developer",
+    date: "July 2024 - Aug 2025",
     location: "Remote",
-    description: "Engineered and launched 3+ responsive client web applications using Angular, React, Next.js, and Tailwind CSS. Led the 'DIC Nigeria' project as project manager while developing the front-end interface.",
-    highlights: ["Angular", "React", "Next.js", "Project Lead", "PHP", "Docker"],
-    gradient: "from-purple-500 to-pink-500",
-  },
-  {
-    company: "The Nebula",
-    role: "Front-End Developer",
-    date: "Sept 2025 - Oct 2025",
-    location: "Remote",
-    description: "Collaborate with a distributed open-source team as a freelance developer, contributing to a shared repository while maintaining high code quality and meeting task deadlines.",
-    highlights: ["Open Source", "Collaboration", "Code Quality"],
-    gradient: "from-orange-500 to-red-500",
+    description: "Launched 3+ responsive web apps using Angular, React, and Next.js. Led the 'DIC Nigeria' project as project manager and pioneered NextJs adoption for internal projects.",
+    highlights: ["Next.js", "Angular", "Project Lead", "PHP", "MySQL", "Docker"],
+    gradient: "from-foreground/40 to-foreground/10",
   },
 ];
 
@@ -77,19 +77,12 @@ function ExperienceCard({
       className="group relative"
     >
       {/* Glow effect */}
-      <div className={`absolute -inset-1 rounded-2xl bg-gradient-to-r ${exp.gradient} opacity-0 group-hover:opacity-50 blur-xl transition-all duration-500`} />
+      <div className={`absolute -inset-1 rounded-2xl bg-foreground opacity-0 group-hover:opacity-10 blur-xl transition-all duration-500`} />
       
       {/* Card */}
-      <div className="relative p-6 md:p-8 rounded-2xl bg-background border border-border/50 group-hover:border-transparent group-hover:shadow-2xl transition-all duration-300">
+      <div className="relative p-6 md:p-8 rounded-2xl bg-background border border-border group-hover:border-transparent group-hover:shadow-2xl transition-all duration-300">
         {/* Company badge */}
         <div className="flex flex-col md:flex-row items-start md:items-center gap-3 justify-between mb-4">
-          <motion.div 
-            className={`p-2.5 rounded-xl bg-gradient-to-br ${exp.gradient} shadow-lg`}
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ type: "spring", stiffness: 400 }}
-          >
-            <Briefcase className="w-5 h-5 text-white" />
-          </motion.div>
           <span className="text-sm font-medium text-muted-foreground flex items-center gap-1.5">
             <Calendar className="w-4 h-4" />
             {exp.date}
@@ -97,11 +90,11 @@ function ExperienceCard({
         </div>
 
         {/* Role & Company */}
-        <h3 className="text-xl md:text-2xl font-bold mb-1 group-hover:text-primary transition-colors">
+        <h3 className="text-xl md:text-2xl font-bold mb-1 transition-colors">
           {exp.role}
         </h3>
         <div className="flex items-center gap-2 text-muted-foreground mb-4">
-          <span className={`font-semibold text-transparent bg-clip-text bg-gradient-to-r ${exp.gradient}`}>
+          <span className="font-semibold text-foreground">
             {exp.company}
           </span>
           <span className="text-border">•</span>
@@ -159,24 +152,16 @@ export default function Experience() {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <motion.span
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
-        >
-          Career
-        </motion.span>
+   
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-4xl md:text-5xl font-heading font-bold mb-4"
+          className="text-5xl md:text-7xl font-heading font-bold mb-4"
         >
           Work{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-pink-500">
+          <span className="font-serif italic font-normal tracking-tight text-foreground lowercase">
             Experience
           </span>
         </motion.h2>
@@ -196,7 +181,7 @@ export default function Experience() {
         <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border/50 md:-translate-x-1/2">
           <motion.div 
             style={{ height: lineHeight }} 
-            className="w-full bg-gradient-to-b from-primary via-purple-500 to-pink-500 origin-top"
+            className="w-full bg-foreground/30 origin-top"
           />
         </div>
 
@@ -214,7 +199,7 @@ export default function Experience() {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, type: "spring", stiffness: 300 }}
-                className={`absolute left-4 md:left-1/2 w-4 h-4 rounded-full border-4 border-background bg-gradient-to-br ${exp.gradient} md:-translate-x-1/2 mt-8 z-10 shadow-lg`}
+                className={`absolute left-4 md:left-1/2 w-4 h-4 rounded-full border-4 border-background bg-foreground md:-translate-x-1/2 mt-8 z-10 shadow-lg`}
               />
               
               {/* Card container */}
