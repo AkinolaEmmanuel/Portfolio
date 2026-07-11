@@ -16,7 +16,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)"],
+        sans: ["var(--font-montserrat)"],
         heading: ["var(--font-space-grotesk)"],
       },
       colors: {

@@ -22,7 +22,7 @@ const projects = [
   {
     id: 2,
     title: "Emmanuel Akinola's Blog",
-    image: "/screenshot16.png",
+    image: "/Screenshot16.png",
     description: "A personal blog website for my writing. Designed with React, Vite, Tailwindcss.",
     repo: "https://www.github.com/AkinolaEmmanuel/myBlog",
     link: "https://emmanuelakinola-blog.netlify.app",
@@ -32,7 +32,7 @@ const projects = [
   {
     id: 3,
     title: "BlockChain Masters",
-    image: "/screenshot3.png",
+    image: "/Screenshot3.png",
     description: "A company website for BlockChain Masters, an affiliate of Blockfuse Labs where I served.",
     repo: "https://www.github.com/AkinolaEmmanuel/blockchain-masters",
     link: "https://blockchain-masters.vercel.app/",
@@ -42,7 +42,7 @@ const projects = [
   {
     id: 4,
     title: "Billionaire Bukunmi",
-    image: "/screenshot6.png",
+    image: "/Screenshot6.png",
     description: "A portfolio website for Billionaire Bukunmi - A public speaker, founder, counsellor and author.",
     repo: "https://www.github.com/AkinolaEmmanuel/portfolio-website-for-client",
     link: "https://billionairebukunmi.com/",
@@ -52,7 +52,7 @@ const projects = [
   {
     id: 5,
     title: "Movie Summary Encyclopedia",
-    image: "/screenshot7.png",
+    image: "/Screenshot7.png",
     description: "A movie summary encyclopedia website that provides concise summaries of movies.",
     repo: "https://www.github.com/AkinolaEmmanuel/movie-home",
     link: "https://movie-home-rflu.onrender.com/",

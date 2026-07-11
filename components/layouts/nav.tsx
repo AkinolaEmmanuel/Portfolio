@@ -101,9 +101,9 @@ export default function Navbar() {
           scrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent"
         )}
       >
-        <div className="max-w-[1200px] mx-auto flex items-center justify-between h-16 px-4">
-          <Link 
-            href="/" 
+        <div className="max-w-[1200px] mx-auto flex items-center justify-between h-28 px-4">
+          <Link
+            href="/"
             className="font-heading text-xl font-bold relative z-50"
             onClick={() => setIsMobileMenuOpen(false)}
           >
@@ -134,10 +134,10 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
-             {/* Email Copy - Visible on large screens */}
+            {/* Email Copy - Visible on large screens */}
             <div className="hidden lg:flex items-center gap-2">
               {!copied &&
-              <p className="text-sm">{EMAIL}</p>
+                <p className="text-sm">{EMAIL}</p>
               }
               <button
                 onClick={handleCopyEmail}
@@ -219,7 +219,7 @@ export default function Navbar() {
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
-            
+
             {/* Sidebar */}
             <motion.div
               initial={{ x: "100%" }}
@@ -283,10 +283,10 @@ export default function Navbar() {
                       { icon: Twitter, href: "https://twitter.com/akinolatijesu7" },
                       { icon: Mail, href: "mailto:akinolaemmanueltijesunimi@gmail.com" }
                     ].map((Item, i) => (
-                      <a 
-                        key={i} 
-                        href={Item.href} 
-                        target="_blank" 
+                      <a
+                        key={i}
+                        href={Item.href}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-foreground transition-colors"
                       >

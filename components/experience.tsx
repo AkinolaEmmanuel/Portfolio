@@ -3,16 +3,26 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef, MouseEvent } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
+    company: "TM30",
+    role: "Software Engineer",
+    date: "March 2026 - Present",
+    location: "Lagos, Nigeria",
+    description: "Leading the Frontend Revamp of a legacy banking system, Built two websites with CMS functionality and managing team of interns.",
+    highlights: ["Nextjs", "Reactjs", "Sanity", "Figma", "Team Management"],
+    gradient: "from-foreground/80 to-foreground/40"
+
+  },
+  {
     company: "LASEPA (Contract)",
     role: "Full-Stack Developer",
-    date: "Jan 2025 – Present",
+    date: "Jan 2026 – April 2026",
     location: "Lagos, Nigeria",
-    description: "Engineered the Back-end for a state-wide ticketing complaint system with NestJs. Collaborated on Front-end using TanstackQuery and Zustand, translating Figma prototypes to responsive interfaces.",
-    highlights: ["NestJs", "TanstackQuery", "Zustand", "System Design"],
+    description: "Engineered the Front-End and Back-end for a state-wide ticketing complaint system including a multi role based admin portal for managing tickets and assets with NestJs on the Backend and React on the Frontend. Setup the Front-end using TanstackQuery and Zustand, translating Figma prototypes to responsive interfaces. Configured the Backend with Redis, Amazon S3 Bucket, Amazon EC2 and Resend for the Email service",
+    highlights: ["NestJs", "Reactjs", "Redis", "Amazon S3", "Amazon EC2", "Resend", "TanstackQuery", "Zustand", "System Design"],
     gradient: "from-foreground/80 to-foreground/40",
   },
   {
@@ -36,11 +46,11 @@ const experiences = [
 ];
 
 // Experience card with 3D tilt effect
-function ExperienceCard({ 
-  exp, 
-  index 
-}: { 
-  exp: typeof experiences[0]; 
+function ExperienceCard({
+  exp,
+  index
+}: {
+  exp: typeof experiences[0];
   index: number;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -54,7 +64,7 @@ function ExperienceCard({
     const centerY = rect.height / 2;
     const x = e.clientX - rect.left - centerX;
     const y = e.clientY - rect.top - centerY;
-    
+
     rotateX.set(-(y / centerY) * 6);
     rotateY.set((x / centerX) * 6);
   }
@@ -78,7 +88,7 @@ function ExperienceCard({
     >
       {/* Glow effect */}
       <div className={`absolute -inset-1 rounded-2xl bg-foreground opacity-0 group-hover:opacity-10 blur-xl transition-all duration-500`} />
-      
+
       {/* Card */}
       <div className="relative p-6 md:p-8 rounded-2xl bg-background border border-border group-hover:border-transparent group-hover:shadow-2xl transition-all duration-300">
         {/* Company badge */}
@@ -119,8 +129,8 @@ function ExperienceCard({
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 + i * 0.05 + 0.2 }}
             >
-              <Badge 
-                variant="secondary" 
+              <Badge
+                variant="secondary"
                 className="bg-secondary/60 hover:bg-secondary text-xs cursor-default transition-colors"
               >
                 {highlight}
@@ -152,8 +162,8 @@ export default function Experience() {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-   
-        <motion.h2 
+
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -165,7 +175,7 @@ export default function Experience() {
             Experience
           </span>
         </motion.h2>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -175,12 +185,12 @@ export default function Experience() {
           My professional journey building impactful digital solutions
         </motion.p>
       </motion.div>
-      
+
       <div ref={containerRef} className="relative max-w-4xl mx-auto">
         {/* Timeline Line */}
         <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border/50 md:-translate-x-1/2">
-          <motion.div 
-            style={{ height: lineHeight }} 
+          <motion.div
+            style={{ height: lineHeight }}
             className="w-full bg-foreground/30 origin-top"
           />
         </div>
@@ -189,24 +199,23 @@ export default function Experience() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`relative flex flex-col md:flex-row gap-4 md:gap-8 ${
-                index % 2 === 0 ? "md:flex-row-reverse" : ""
-              }`}
+              className={`relative flex flex-col md:flex-row gap-4 md:gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                }`}
             >
               {/* Timeline dot */}
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, type: "spring", stiffness: 300 }}
                 className={`absolute left-4 md:left-1/2 w-4 h-4 rounded-full border-4 border-background bg-foreground md:-translate-x-1/2 mt-8 z-10 shadow-lg`}
               />
-              
+
               {/* Card container */}
               <div className="flex-1 pl-10 md:pl-0">
                 <ExperienceCard exp={exp} index={index} />
               </div>
-              
+
               {/* Empty space for alternating layout */}
               <div className="flex-1 hidden md:block" />
             </div>

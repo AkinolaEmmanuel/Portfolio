@@ -14,12 +14,12 @@ import {
   Mail,
   Send,
   ArrowUp,
-  Sparkles,
   CheckCircle,
   X
 } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -101,6 +101,7 @@ export default function ContactForm() {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast.error("Failed to send message. Please try again or email me directly.");
     } finally {
       setIsSubmitting(false);
     }
